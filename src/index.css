@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(8, 8, 8, 0.1);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FFFFFF;
+    color: #080808;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Outlined typography for dramatic magazine headers */
+.text-outline {
+  -webkit-text-stroke: 1.5px #080808;
+  color: transparent;
+}
+
+.text-outline-white {
+  -webkit-text-stroke: 1.5px #FFFFFF;
+  color: transparent;
+}
+
+.text-outline-blue {
+  -webkit-text-stroke: 1.5px #3155FF;
+  color: transparent;
+}
+
+/* Editorial gallery cards */
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(8, 8, 8, 0.12);
+  box-shadow: 0 12px 36px -12px rgba(8, 8, 8, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #3155FF;
+  box-shadow: 0 24px 48px -12px rgba(49, 85, 255, 0.18);
+  transform: translateY(-4px);
+}
+
+/* Blue Accent Button */
+.btn-blue {
+  background-color: #3155FF;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-blue:hover {
+  background-color: #1635C7;
+  box-shadow: 0 12px 28px -6px rgba(49, 85, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Perspective utilities for 3D cards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar in high contrast */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #080808;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3155FF;
+}
+
+/* Subtle architectural grid lines */
+.bg-grid-minimal {
+  background-size: 80px 80px;
+  background-image: 
+    linear-gradient(to right, rgba(8, 8, 8, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 8, 8, 0.03) 1px, transparent 1px);
+}
